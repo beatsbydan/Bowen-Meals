@@ -1,0 +1,10 @@
+.banner{
+    width: 100%;
+    padding: 4rem;
+    margin-top: 1rem;
+    background-color: rgba(128, 128, 128, 0.537);
+}
+.banner h1{
+    font-size: 2rem;
+    text-align: center;
+}

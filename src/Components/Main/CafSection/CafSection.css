@@ -1,0 +1,96 @@
+.cafSection{
+    width: 90%;
+    max-width: 1000px;
+    margin: 4em auto;
+    text-align: center;
+}
+.cafSection p{
+    margin-top: 0.5em;
+}
+.cafs{
+    width: 100%;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7em;
+}
+.glory{
+    background-image: url(../../../Assets/Images/caf-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.forza{
+     background-image: url(../../../Assets/Images/caf-2.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.sumptuous{
+     background-image: url(../../../Assets/Images/caf-3.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.kemiBee{
+     background-image: url(../../../Assets/Images/caf-4.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.divine{
+     background-image: url(../../../Assets/Images/caf-5.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.jubilee{
+     background-image: url(../../../Assets/Images/caf-6.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.bbsf{
+     background-image: url(../../../Assets/Images/caf-7.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.buwa{
+     background-image: url(../../../Assets/Images/caf-8.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.blessed{
+     background-image: url(../../../Assets/Images/caf-9.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.y2k{
+     background-image: url(../../../Assets/Images/caf-10.jpg);
+     background-position: center center;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+.caf{
+    padding: 5rem;
+    background-color: black ;   
+    cursor: pointer; 
+}
+.cafBlock{
+    width: 30%;
+    text-align: center;
+}
+@media screen and (max-width:600px) {
+    .cafs{
+        flex-direction: column;
+    }
+    .cafBlock{
+        width: 70%;
+    }
+}
