@@ -9,9 +9,9 @@ const CartItem = (props) => {
             <div className="mealItem">
                 <div className="left" style={{backgroundImage: `url(${props.img})`}}></div>
                 <div className="right">
-                    <h4>{props.food}</h4>
-                    <p>Spoons:<span>{props.spoons}</span></p>
-                    <p>Price: <span>{props.totalPrice}</span></p>
+                    <h4>{props.food || props.drink}</h4>
+                    <p>Amount:<span>{props.spoons || props.pcs}</span></p>
+                    <p>Price: ₦<span>{props.totalMealPrice ||props.totalDrinkPrice}</span></p>
                 </div>
             </div>
         </li>

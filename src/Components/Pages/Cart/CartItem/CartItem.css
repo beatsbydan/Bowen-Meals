@@ -18,6 +18,11 @@
     border-radius: 0.5rem;
     font-size:1rem;
 }
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
 .mealItem{
     display: flex;
     width: 100%;

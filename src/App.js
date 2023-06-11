@@ -47,6 +47,7 @@ function App() {
                 <Route path='/profile' element={<Profile/>}/>
                 <Route path='/cart' element={<Cart/>}/>
                 <Route path='/meal' element={<MealModal/>}/>
+                <Route path='/drink' element={<MealModal/>}/>
               </Routes>
             <Footer/>
           </Router>

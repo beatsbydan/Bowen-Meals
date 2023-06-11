@@ -8,7 +8,7 @@
     width: 100%;
     max-width: 250px;
     display: flex;
-    margin: auto;
+    margin: 3rem auto 1rem auto;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -31,4 +31,9 @@
     align-items: center;
     gap: 5%;
     flex-wrap: wrap;
+}
+@media screen and (max-width:500px) {
+    .mealItems{
+        flex-direction: column;
+    }
 }

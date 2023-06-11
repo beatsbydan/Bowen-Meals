@@ -24,7 +24,7 @@
     align-items: center;
 }
 .rightBlock img{
-    width: 40px;
+    width: 35px;
 }
 .myNav{
     width: 90%;
@@ -94,11 +94,12 @@
 }
 .indicator{
     position: absolute;
-    padding: 0.5rem;
+    padding: 0.3rem;
     background-color: black;
     border-radius: 0.3rem;
     top: -4px;
-    right: 0;
+    right: 12px;
+    font-size: 0.5rem;
     color: white;
 }
 @media screen and (max-width:800px) {
@@ -156,14 +157,8 @@
     .nav{
         padding: 0.2em 5%;
     }
-    .rightBlock img{
-        width: 30px;
-    }
 }
 @media screen and (max-width:500px) {
-    .rightBlock img{
-        width: 25px;
-    }
     .logo img{
         width: 90px;
     }

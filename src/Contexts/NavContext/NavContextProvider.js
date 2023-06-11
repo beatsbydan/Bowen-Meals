@@ -14,7 +14,6 @@ const NavContextProvider = (props) => {
     const handleExit = (ref) =>{
         setNavOpen(false)
         setShown(false)
-        handleCafeterias('Cafeterias', ref)
         ref.current.classList.remove('responsive_nav')
     }
     const handleDropDown = () => {

@@ -4,14 +4,13 @@ import person from '../../../Assets/Icons/person.svg'
 import {MdKeyboardArrowDown,MdKeyboardArrowUp} from 'react-icons/md'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {CgClose} from 'react-icons/cg'
-import { useRef} from 'react';
+import {useRef} from 'react';
 import { useContext } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import NavContext from '../../../Contexts/NavContext/NavContext'
 import MealContext from '../../../Contexts/MealContext/MealContext'
 const Navbar = () => {
-    const currentCaf = localStorage.getItem('currCaf')
     const navRef = useRef()
     const ctx = useContext(NavContext)
     const cartCtx = useContext(MealContext)
@@ -27,10 +26,10 @@ const Navbar = () => {
                 <div className="mainNav">
                     <ul className='myNav'>
                         <Link onClick={()=>ctx.handleExit(navRef)} to={'/'}><li className='home'>Home</li></Link>
-                        <Link onClick={()=>ctx.handleExit(navRef)} to={'/about'}><li className='aboutUs'>How it works</li></Link>
+                        <Link onClick={()=>ctx.handleNav(navRef)} to={'/about'}><li className='aboutUs'>How it works</li></Link>
                         <div className='cafDropdownBlock'>
                             <div className='cafDropdown' onClick={ctx.handleDropDown}>
-                                <li className='navCafs'>{!currentCaf? 'Cafeterias' : currentCaf}</li>
+                                <li className='navCafs'>Cafeterias</li>
                                 {!ctx.shown ? <MdKeyboardArrowDown color='black' size={20}/> : <MdKeyboardArrowUp color='black' size={20}/>}
                             </div>
                             {<div className={ctx.shown?'menuSelect selected':'menuSelect'}>
@@ -53,7 +52,7 @@ const Navbar = () => {
             </div>
             <div className="rightBlock">
                 <div className="cart">
-                    {/* {cartCtx.cartItems.length > 0 && <div className="indicator">{ctx.cartItems.length}</div>} */}
+                    {cartCtx.cartSize > 0 &&<div className="indicator">{cartCtx.cartSize}</div>}
                     <Link to={'/cart'}><img src={basket} alt="" /></Link>
                 </div>
                 {<img src={person} alt=""/>}

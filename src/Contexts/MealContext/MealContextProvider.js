@@ -3,60 +3,116 @@ import MealContext from "./MealContext";
 
 const MealContextProvider = (props) => {
     const [meal, setMeal] = useState({})
+    const [drink, setDrink] = useState({})
     const [cartItems, setCartItems] = useState([])
-    const defaultItems = {
+    const defaultFoodItems = {
         spoons: 0,
-        totalPrice: 0,
+        totalMealPrice: 0,
+    }
+    const defaultDrinkItems = {
+        pcs: 0,
+        totalDrinkPrice: 0
     }
     const foodReducer = (state, action) => {
         if(action.type === 'ADD'){
             const newSpoons = state.spoons + 1
-            const newTotalPrice = state.totalPrice + (action.meal.price)
+            const newTotalMealPrice = state.totalMealPrice + (action.meal.price)
             return{
                 spoons: newSpoons,
-                totalPrice: newTotalPrice
+                totalMealPrice: newTotalMealPrice
             }
         }
         if(action.type === 'REMOVE'){
             let newSpoons = state.spoons - 1
-            let newTotalPrice = state.totalPrice - (action.meal.price)
+            let newTotalMealPrice = state.totalMealPrice - (action.meal.price)
             if(newSpoons < 0){
                 newSpoons = 0
-                newTotalPrice = 0
+                newTotalMealPrice = 0
             }
             return{
                 spoons: newSpoons,
-                totalPrice: newTotalPrice
+                totalMealPrice: newTotalMealPrice
             }
         }
         if(action.type === 'CLEAR'){
             const newSpoons = 0
-            const newTotalPrice = 0
+            const newTotalMealPrice = 0
             return{
                 spoons: newSpoons,
-                totalPrice: newTotalPrice
+                totalMealPrice: newTotalMealPrice
             }
         }
-        return defaultItems;
+        return defaultFoodItems;
     }
-    const [myFood, dispatchMyFood] = useReducer(foodReducer,defaultItems)
+    const drinkReducer = (state, action) => {
+        if(action.type === 'ADD'){
+            const newPcs = state.pcs + 1
+            const newTotalDrinkPrice = state.totalDrinkPrice + (action.drink.price)
+            return{
+                pcs: newPcs,
+                totalDrinkPrice: newTotalDrinkPrice
+            }
+        }
+        if(action.type === 'REMOVE'){
+            let newPcs = state.pcs - 1
+            let newTotalDrinkPrice = state.totalDrinkPrice - (action.drink.price)
+            if(newPcs < 0){
+                newPcs = 0
+                newTotalDrinkPrice = 0
+            }
+            return{
+                pcs: newPcs,
+                totalDrinkPrice: newTotalDrinkPrice
+            }
+        }
+        if(action.type === 'CLEAR'){
+            const newPcs = 0
+            const newTotalDrinkPrice = 0
+            return{
+                pcs: newPcs,
+                totalDrinkPrice: newTotalDrinkPrice
+            }
+        }
+        return defaultDrinkItems;
+    }
+    const [myFood, dispatchMyFood] = useReducer(foodReducer,defaultFoodItems)
+    const [myDrink, dispatchMyDrink] = useReducer(drinkReducer,defaultDrinkItems)
     const handleMeal = (meal) => {
         setMeal(meal)
+    }
+    const handleDrink = (drink) => {
+        setDrink(drink)
     }
     const addFood = (meal) =>{
         dispatchMyFood({type: 'ADD', meal:meal})
     }
+    const addDrink = (drink) => {
+        dispatchMyDrink({type: 'ADD', drink:drink})
+    }
     const removeFood = (meal) => {
         dispatchMyFood({type:'REMOVE', meal:meal})
     }
-    const clear = () => {
+    const removeDrink = (drink) => {
+        dispatchMyDrink({type:'REMOVE', drink:drink})
+    }
+    const clearFood = () => {
         dispatchMyFood({type:'CLEAR'})
     }
-    const addToCart = (meal) => {
-        setCartItems(prev=>{
-            return [...prev, meal]
-        })
+    const clearDrinks = () => {
+        dispatchMyDrink({type:'CLEAR'})
+    }
+    const addToCart = (item) => {
+        if(!cartItems.some(myItem=>{
+            return(
+                myItem.id === item.id
+            )
+        })){
+            setCartItems(prev=>{
+                return [...prev, item]
+            })
+        }
         dispatchMyFood({type:'CLEAR'})        
+        dispatchMyDrink({type:'CLEAR'})        
     }
     const removeFromCart = (id) => {
         const newCartItems = cartItems.filter(item=>{
@@ -68,17 +124,25 @@ const MealContextProvider = (props) => {
         setCartItems([])
     }
     const updatedContext = {
+        cartSize: cartItems.length,
         cartItems: cartItems,
         spoons: myFood.spoons,
-        totalPrice: myFood.totalPrice,
+        totalMealPrice: myFood.totalMealPrice,
+        pcs: myDrink.pcs,
+        totalDrinkPice: myDrink.totalDrinkPrice,
         meal: meal,
+        drink: drink,
         addFood: addFood,
-        clear:clear,
+        addDrink: addDrink,
+        clearFood:clearFood,
+        clearDrinks:clearDrinks,
         removeFood: removeFood,
+        removeDrink: removeDrink,
         addToCart: addToCart,
         removeFromCart: removeFromCart,
         clearCart:clearCart,
-        handleMeal: handleMeal
+        handleMeal: handleMeal,
+        handleDrink: handleDrink
     }
     return ( 
         <MealContext.Provider value={updatedContext}>

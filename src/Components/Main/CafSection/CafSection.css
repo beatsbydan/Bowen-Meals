@@ -6,6 +6,7 @@
 }
 .cafSection p{
     margin-top: 0.5em;
+    font-weight: 600;
 }
 .cafs{
     width: 100%;
@@ -15,7 +16,7 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.7em;
+    gap: 1em;
 }
 .glory{
     background-image: url(../../../Assets/Images/caf-1.jpg);
@@ -79,8 +80,8 @@
 }
 .caf{
     padding: 5rem;
-    background-color: black ;   
     cursor: pointer; 
+    border-radius: 0.5rem;
 }
 .cafBlock{
     width: 30%;

@@ -12,7 +12,7 @@
     padding: 1rem;
     border-radius: 0.5rem;
 }
-.food{
+.drink{
     margin-top: 2rem;
     text-align: center;
 }
@@ -31,7 +31,7 @@
     align-items: center;
     gap: 0.7rem;
 }
-.numberOfSpoons{
+.numberOfPieces{
     background-color: #09546F;
     width:90%;
     color: white;
@@ -61,7 +61,7 @@
     text-align: center;
     border-radius: 0.5rem;
 }
-.numberOfSpoons button{
+.numberOfPieces button{
     background-color:#518CC2;
     width: 15%;
     padding:0 ;

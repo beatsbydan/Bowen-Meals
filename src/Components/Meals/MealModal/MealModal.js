@@ -13,7 +13,7 @@ const MealModal = () => {
         ctx.removeFood(ctx.meal)
     }
     const handleReturn = () => {
-        ctx.clear()
+        ctx.clearFood()
         navigate(`/${myCaf.toLowerCase()}`)
     }
     const addToCart = () =>{
@@ -22,7 +22,7 @@ const MealModal = () => {
             food: ctx.meal.food,
             img: ctx.meal.img,
             spoons: ctx.spoons,
-            totalPrice: ctx.totalPrice
+            totalMealPrice: ctx.totalMealPrice
         })
         navigate(`/${myCaf.toLowerCase()}`)
     }
@@ -37,7 +37,7 @@ const MealModal = () => {
                         <div>{ctx.spoons} SPOONS</div>
                         <button onClick={removeFood} className="decrement">-</button>
                     </div>
-                    <div className="price"> ₦{ctx.totalPrice}</div>
+                    <div className="price"> ₦{ctx.totalMealPrice}</div>
                     <button onClick={addToCart} className="addToCart">ADD TO CART</button>
                     <button onClick={handleReturn} className="addMore">SELECT MORE</button>
                 </div>

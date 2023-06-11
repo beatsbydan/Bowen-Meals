@@ -1,15 +1,23 @@
 import React from "react";
 const MealContext = React.createContext({
     spoons: 0,
-    totalPrice: 0,
+    cartSize: 0,
+    totalMealPrice: 0,
+    pcs: 0,
+    totalDrinkPrice: 0,
     cartItems: [],
     meal: {},
-    clear:()=>{},
+    drink: {},
+    clearFood:()=>{},
+    clearDrinks:()=>{},
     clearCart:()=>{},
     removeFromCart:()=>{},
     addFood: ()=>{},
+    addDrink: ()=>{},
     removeFood: ()=>{},
+    removeDrink: ()=>{},
     addToCart: ()=>{},
-    handleMeal: ()=>{}
+    handleMeal: ()=>{},
+    handleDrink: ()=>{}
 })
 export default MealContext
