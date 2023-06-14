@@ -6,12 +6,6 @@ const MealModal = () => {
     const myCaf = localStorage.getItem('currCaf')
     const navigate = useNavigate()
     const ctx = useContext(MealContext)
-    const addFood = () => {
-        ctx.addFood(ctx.meal)
-    }
-    const removeFood = () => {
-        ctx.removeFood(ctx.meal)
-    }
     const handleReturn = () => {
         ctx.clearFood()
         navigate(`/${myCaf.toLowerCase()}`)
@@ -33,9 +27,9 @@ const MealModal = () => {
                 <div className="modalLeft" style={{backgroundImage: `url(${ctx.meal.img}`}}></div>
                 <div className="modalRight">
                     <div className="numberOfSpoons">
-                        <button onClick={addFood} className="increment">+</button>
+                        <button onClick={()=>ctx.addFood(ctx.meal)} className="increment">+</button>
                         <div>{ctx.spoons} SPOONS</div>
-                        <button onClick={removeFood} className="decrement">-</button>
+                        <button onClick={()=>ctx.removeFood(ctx.meal)} className="decrement">-</button>
                     </div>
                     <div className="price"> ₦{ctx.totalMealPrice}</div>
                     <button onClick={addToCart} className="addToCart">ADD TO CART</button>

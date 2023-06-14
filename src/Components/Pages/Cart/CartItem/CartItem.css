@@ -23,6 +23,12 @@
     flex-direction: column;
     gap: 0.7rem;
 }
+.right p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+}
 .mealItem{
     display: flex;
     width: 100%;

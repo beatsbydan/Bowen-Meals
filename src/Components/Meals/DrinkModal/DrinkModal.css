@@ -44,6 +44,10 @@
     justify-content: space-between;
 }
 .modalRight button{
+    cursor: pointer;
+    border: onne;
+}
+.addToCart, .addMore{
     width: 90%;
     cursor: pointer;
     background-color:#09546F;
@@ -61,13 +65,23 @@
     text-align: center;
     border-radius: 0.5rem;
 }
-.numberOfPieces button{
+.increment{
     background-color:#518CC2;
     width: 15%;
+    border-radius: 0.5rem 0 0 0.5rem;
     padding:0 ;
     font-size: 2.2rem;
     color: black;
 }
+.decrement{
+    background-color:#518CC2;
+    width: 15%;
+    border-radius: 0 0.5rem 0.5rem 0;
+    padding:0 ;
+    font-size: 2.2rem;
+    color: black;
+}
+
 @media screen and (max-width:600px) {
     .modalBlock{
         flex-direction: column;

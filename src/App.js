@@ -1,6 +1,5 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Profile from './Components/Pages/Profile/Profile';
 import Home from './Components/Home/Home';
 import Bbsf from './Components/Pages/CafPages/Bbsf/Bbsf';
 import Blessed from './Components/Pages/CafPages/Blessed/Blessed';
@@ -21,6 +20,8 @@ import NavContextProvider from './Contexts/NavContext/NavContextProvider';
 import MealContextProvider from './Contexts/MealContext/MealContextProvider';
 import Cart from './Components/Pages/Cart/Cart';
 import MealModal from './Components/Meals/MealModal/MealModal';
+import DrinkModal from './Components/Meals/DrinkModal/DrinkModal';
+import Success from './Components/Pages/Success/Success';
 
 function App() {
   return (
@@ -44,10 +45,10 @@ function App() {
                 <Route path='/signup' element={<SignUp/>}/>
                 <Route path='/login' element={<LogIn/>}/>
                 <Route path='/about' element={<About/>}/>
-                <Route path='/profile' element={<Profile/>}/>
                 <Route path='/cart' element={<Cart/>}/>
                 <Route path='/meal' element={<MealModal/>}/>
-                <Route path='/drink' element={<MealModal/>}/>
+                <Route path='/drink' element={<DrinkModal/>}/>
+                <Route path='/success' element={<Success/>}/>
               </Routes>
             <Footer/>
           </Router>

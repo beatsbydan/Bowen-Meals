@@ -6,12 +6,6 @@ const DrinkModal = () => {
     const ctx = useContext(MealContext)
     const myCaf = localStorage.getItem('currCaf')
     const navigate = useNavigate()
-    const addDrink = () => {
-        ctx.addDrink(ctx.drink)
-    }
-    const removeDrink = () => {
-        ctx.removeDrink(ctx.drink)
-    }
     const handleReturn = () => {
         ctx.clearDrinks()
         navigate(`/${myCaf.toLowerCase()}`)
@@ -19,23 +13,23 @@ const DrinkModal = () => {
     const addToCart = () =>{
         ctx.addToCart({
             id: ctx.drink.id,
-            name: ctx.drink.food,
+            name: ctx.drink.drink,
             img: ctx.drink.img,
-            pcs: ctx.pcs,
+            pcs: ctx.pieces,
             totalDrinkPrice: ctx.totalDrinkPrice
         })
         navigate(`/${myCaf.toLowerCase()}`)
     }
     return ( 
         <React.Fragment>
-            <h2 className='drink'>{ctx.drink.name}</h2>
+            <h2 className='drink'>{ctx.drink.drink}</h2>
             <div className="modalBlock">
                 <div className="modalLeft" style={{backgroundImage: `url(${ctx.drink.img}`}}></div>
                 <div className="modalRight">
                     <div className="numberOfPieces">
-                        <button onClick={addDrink} className="increment">+</button>
-                        <div>{ctx.pcs} PCS</div>
-                        <button onClick={removeDrink} className="decrement">-</button>
+                        <button onClick={()=>ctx.addDrink(ctx.drink)} className="increment">+</button>
+                        <div>{ctx.pieces} PCS</div>
+                        <button onClick={()=>ctx.removeDrink(ctx.drink)} className="decrement">-</button>
                     </div>
                     <div className="price"> ₦{ctx.totalDrinkPrice}</div>
                     <button onClick={addToCart} className="addToCart">ADD TO CART</button>

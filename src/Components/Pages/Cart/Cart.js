@@ -2,20 +2,20 @@ import { useContext } from 'react';
 import './Cart.css'
 import MealContext from '../../../Contexts/MealContext/MealContext';
 import CartItem from './CartItem/CartItem';
+import { useNavigate } from 'react-router-dom';
 const Cart = () => {
+    const navigate = useNavigate()
     const ctx = useContext(MealContext)
     const currCaf = localStorage.getItem('currCaf')
-    const totalMealPrice = ctx.cartItems.map(item=>item.totalMealPrice).reduce((acc, currVal)=>{
-        return(
-            acc + currVal
+    const handleSuccess = () => {
+        ctx.clearCart()
+        navigate('/success')
+    }
+    const totalPrice = ctx.cartItems.map(item=>item.totalMealPrice|| item.totalDrinkPrice).reduce((acc,val)=>{
+        return (
+            acc + val
         )
     },0)
-    const totalDrinksPrice = ctx.cartItems.map(item=>item.totalDrinkPrice).reduce((acc, currVal)=>{
-        return(
-            acc + currVal
-        )
-    },0)
-    const total = totalMealPrice + (totalDrinksPrice ? totalDrinksPrice : 0)
     return ( 
         <div className="cart">
             {ctx.cartSize > 0 &&<h2>{!currCaf ? '' : currCaf.toLocaleUpperCase()}</h2>}
@@ -37,10 +37,10 @@ const Cart = () => {
                 })}
             </ul>}
             {ctx.cartSize > 0 &&<div className="cartTotal">
-                <span>TOTAL: <span> ₦{total}</span></span>
+                <span>TOTAL:<span> ₦{totalPrice}.</span></span>
             </div>}
             {ctx.cartSize > 0 &&<div className="actions">
-                <button>CHECKOUT</button>
+                <button onClick = {handleSuccess}>CHECKOUT</button>
                 <button onClick={ctx.clearCart}>CLEAR</button>
             </div>}
         </div>

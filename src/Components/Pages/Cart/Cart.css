@@ -24,6 +24,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 0.7rem;
 }
 .cartTotal span span{
     font-weight: 600;
