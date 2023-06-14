@@ -13,7 +13,6 @@ import Sumptuous from './Components/Pages/CafPages/Sumptuous/Sumptuous';
 import Y2k from './Components/Pages/CafPages/Y2k/Y2k';
 import SignUp from './Components/Pages/Authentication/SignUp/SignUp';
 import LogIn from './Components/Pages/Authentication/LogIn/LogIn';
-import About from './Components/Pages/About/About';
 import Navbar from './Components/Header/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import NavContextProvider from './Contexts/NavContext/NavContextProvider';
@@ -44,7 +43,6 @@ function App() {
                 <Route path='/y2k' element={<Y2k/>}/>
                 <Route path='/signup' element={<SignUp/>}/>
                 <Route path='/login' element={<LogIn/>}/>
-                <Route path='/about' element={<About/>}/>
                 <Route path='/cart' element={<Cart/>}/>
                 <Route path='/meal' element={<MealModal/>}/>
                 <Route path='/drink' element={<DrinkModal/>}/>
