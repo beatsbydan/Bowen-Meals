@@ -26,7 +26,7 @@ const Navbar = () => {
                 <div className="mainNav">
                     <ul className='myNav'>
                         <Link onClick={()=>ctx.handleExit(navRef)} to={'/'}><li className='home'>Home</li></Link>
-                        <Link onClick={()=>ctx.handleNav(navRef)} to={'/about'}><li className='aboutUs'>How it works</li></Link>
+                        <li onClick={()=>ctx.handleNav(navRef)} className='aboutUs'>How it works</li>
                         <div className='cafDropdownBlock'>
                             <div className='cafDropdown' onClick={ctx.handleDropDown}>
                                 <li className='navCafs'>Cafeterias</li>
