@@ -37,8 +37,6 @@
     border: none;
     padding: 1rem;
     border-radius: 0.7rem;
-}
-.content button a{
     color: white;
 }
 @media screen and (max-width:800px) {
