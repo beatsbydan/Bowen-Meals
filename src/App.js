@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Bbsf from './Components/Pages/CafPages/Bbsf/Bbsf';
 import Blessed from './Components/Pages/CafPages/Blessed/Blessed';
@@ -27,7 +27,6 @@ function App() {
     <NavContextProvider>
       <MealContextProvider>
         <div className="App">
-          <Router>
             <Navbar/>
             <Routes>
               <Route exact path='/' element={<Home/>}/>
@@ -49,7 +48,6 @@ function App() {
               <Route path='/success' element={<Success/>}/>
             </Routes>
             <Footer/>
-          </Router>
         </div>
       </MealContextProvider>
     </NavContextProvider>
