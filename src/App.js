@@ -29,25 +29,26 @@ function App() {
         <div className="App">
           <Router>
             <Navbar/>
-              <Routes>
-                <Route path='/' element={<Home/>}/>
-                <Route path='/bbsf' element={<Bbsf/>}/>
-                <Route path='/blessed' element={<Blessed/>}/>
-                <Route path='/buwa' element={<Buwa/>}/>
-                <Route path='/divine' element={<Divine/>}/>
-                <Route path='/forza' element={<Forza/>}/>
-                <Route path='/glory' element={<Glory/>}/>
-                <Route path='/jubilee' element={<Jubilee/>}/>
-                <Route path='/kemibee' element={<KemiBee/>}/>
-                <Route path='/sumptuous' element={<Sumptuous/>}/>
-                <Route path='/y2k' element={<Y2k/>}/>
-                <Route path='/signup' element={<SignUp/>}/>
-                <Route path='/login' element={<LogIn/>}/>
-                <Route path='/cart' element={<Cart/>}/>
-                <Route path='/meal' element={<MealModal/>}/>
-                <Route path='/drink' element={<DrinkModal/>}/>
-                <Route path='/success' element={<Success/>}/>
-              </Routes>
+            <Home/>
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='/bbsf' element={<Bbsf/>}/>
+              <Route path='/blessed' element={<Blessed/>}/>
+              <Route path='/buwa' element={<Buwa/>}/>
+              <Route path='/divine' element={<Divine/>}/>
+              <Route path='/forza' element={<Forza/>}/>
+              <Route path='/glory' element={<Glory/>}/>
+              <Route path='/jubilee' element={<Jubilee/>}/>
+              <Route path='/kemibee' element={<KemiBee/>}/>
+              <Route path='/sumptuous' element={<Sumptuous/>}/>
+              <Route path='/y2k' element={<Y2k/>}/>
+              <Route path='/signup' element={<SignUp/>}/>
+              <Route path='/login' element={<LogIn/>}/>
+              <Route path='/cart' element={<Cart/>}/>
+              <Route path='/meal' element={<MealModal/>}/>
+              <Route path='/drink' element={<DrinkModal/>}/>
+              <Route path='/success' element={<Success/>}/>
+            </Routes>
             <Footer/>
           </Router>
         </div>
