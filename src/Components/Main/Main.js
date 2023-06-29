@@ -7,7 +7,6 @@ const Main = () => {
             <BackgroundSection/>
             <CafSection/>
         </main>
-     );
+    );
 }
- 
 export default Main;

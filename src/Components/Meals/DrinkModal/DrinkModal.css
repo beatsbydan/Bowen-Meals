@@ -1,14 +1,11 @@
 .modalBlock{
     width: 90%;
     max-width: 700px;
-    background-color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    margin: 0 auto 10rem auto;
     padding: 1rem;
     border-radius: 0.5rem;
 }
@@ -84,11 +81,12 @@
 
 @media screen and (max-width:600px) {
     .modalBlock{
+        width: 100%;
         flex-direction: column;
         gap: 0.7rem;
     }
     .modalLeft{
-        width: 80%;
+        width: 85%;
         height: 150px;
     }
     .modalRight{

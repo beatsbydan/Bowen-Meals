@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './MealModal.css'
 import MealContext from '../../../Contexts/MealContext/MealContext';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../Header/Navbar/Navbar';
 const MealModal = () => {
     const myCaf = localStorage.getItem('currCaf')
     const navigate = useNavigate()
@@ -22,6 +23,7 @@ const MealModal = () => {
     }
     return ( 
         <React.Fragment>
+            <Navbar/>
             <h2 className='food'>{ctx.meal.food}</h2>
             <div className="modalBlock">
                 <div className="modalLeft" style={{backgroundImage: `url(${ctx.meal.img}`}}></div>

@@ -4,6 +4,7 @@ import './Meals.css'
 import Meal from './Meal/Meal';
 import DrinkItems from './DrinkItems';
 import Drink from './Drink/Drink';
+
 const Meals = () => {
     const [type, setType] = useState('food')
     const handleFood = () => {
@@ -45,7 +46,6 @@ const Meals = () => {
                     })}
                 </ul>
             </div>
-            
         </React.Fragment>
     );
 }

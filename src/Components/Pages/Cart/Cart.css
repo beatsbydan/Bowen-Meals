@@ -1,11 +1,11 @@
 .cart{
     width: 90%;
-    max-width: 400px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
     margin: auto;
-    text-align: center;
-}
-.cart h2{
-    margin-top: 2rem;
+    grid-gap:3em;
+    align-items: flex-start;
+    padding-top: 4rem;
 }
 .cart ul{
     display: flex;
@@ -15,6 +15,7 @@
 }
 .defaultStatement{
     margin: 4rem 0;
+    text-align: center;
 }
 .cartTotal{
     margin-top: 2rem;
@@ -49,12 +50,68 @@
     cursor: pointer;
     font-weight: 600;
 }
-@media screen and (max-width: 350px) {
+.cartLeft{
+    padding-right: 3em;
+    border-right: 2px solid black;
+}
+.accountBlock{
+    background-color:#09546F;
+    padding: 2rem;
+    margin-top: 1rem;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+    border-radius: 0.5rem;
+}
+.accountBlock h3, button{
+    color: white;
+}
+.upload{
+    width:100%;
+    max-width: 200px;
+    margin: auto;
+}
+.upload button{
+    width: 100%;
+    padding: 1rem;
+    font-weight: 600;
+    background-color:#09546F;
+    border:none;
+    border-radius:0.5rem;
+    margin-top: 1rem;
+    cursor:pointer
+}
+@media screen and (max-width: 700px) {
+    .cart{
+        grid-template-columns: unset;
+        grid-gap: unset
+    }
+    .cartLeft{
+        border-right: unset;
+        width: 100%;
+        padding-right: unset;
+        max-width: 400px;
+        margin: auto;
+    }
+    .cartRight{
+        text-align: center;
+        margin-bottom:10em;
+    }
     .actions{
-        flex-direction: column;
-        gap:0.6rem;
+        margin: 1.3rem auto 6rem auto;
     }
     .actions button{
         margin:auto;
+    }
+}
+@media screen and (max-width:880px){
+    .actions{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap:0.6rem;
+    }
+    .actions button{
+        margin: auto;
     }
 }

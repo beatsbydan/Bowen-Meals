@@ -11,3 +11,76 @@ a{
   text-decoration: none;
   color: black;
 }
+.myForm{
+  width: 100%;
+  height: 100vh;
+  background-image: url(./Assets/Images/login-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.myForm h3{
+  text-align:center;
+}
+.myForm form{
+  width: 90%;
+  max-width: 500px;
+  height: 400px;
+  padding-top: 3.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.626);
+}
+.formElement{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem auto 0 auto;
+}
+.error{
+  color:red;
+  font-weight:600;
+}
+.formElement input.errorField{
+  border-color: red;
+}
+.formElement label{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+}
+.formElement input{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1em solid transparent;
+}
+input:focus{
+  outline: none;
+}
+input::placeholder{
+  color: black;
+}
+.formActions{
+  width:90%;
+  margin: 1rem auto 0 auto;
+}
+.formActions button{
+  width: 100%;
+  text-align:center;
+  margin: auto;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  color: white;
+  background-color: #09546F;
+  font-size: 1rem;
+  font-weight: 600;
+}

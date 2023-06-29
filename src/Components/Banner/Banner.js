@@ -4,7 +4,7 @@ const Banner = (props) => {
         <div className="banner">
             <h1>{props.caf} CAFETERIA</h1>
         </div>
-     );
+    );
 }
- 
+
 export default Banner;

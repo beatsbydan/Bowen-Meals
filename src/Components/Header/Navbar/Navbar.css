@@ -89,7 +89,7 @@
     width: 100%;
     border-bottom: 1px solid black;
 }
-.cart{
+.cartIndicator{
     position: relative;
 }
 .indicator{
@@ -98,7 +98,7 @@
     background-color: black;
     border-radius: 0.3rem;
     top: -4px;
-    right: 12px;
+    left: 90%;
     font-size: 0.5rem;
     color: white;
 }

@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className='navBlock' ref={navRef}>
                 <div className="mainNav">
                     <ul className='myNav'>
-                        <Link onClick={()=>ctx.handleExit(navRef)} to={'/'}><li className='home'>Home</li></Link>
+                        <Link onClick={()=>ctx.handleExit(navRef)} to={'/dashboard'}><li className='home'>Home</li></Link>
                         <li onClick={()=>ctx.handleNav(navRef)} className='aboutUs'>How it works</li>
                         <div className='cafDropdownBlock'>
                             <div className='cafDropdown' onClick={ctx.handleDropDown}>
@@ -51,7 +51,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="rightBlock">
-                <div className="cart">
+                <div className="cartIndicator">
                     {cartCtx.cartSize > 0 &&<div className="indicator">{cartCtx.cartSize}</div>}
                     <Link to={'/cart'}><img src={basket} alt="" /></Link>
                 </div>
