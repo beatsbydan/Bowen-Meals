@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bowen-meals/static/css/main.602e2dea.css",
-    "main.js": "/bowen-meals/static/js/main.05256dbb.js",
+    "main.css": "/bowen-meals/static/css/main.735c2c1f.css",
+    "main.js": "/bowen-meals/static/js/main.6a7e6a91.js",
     "static/media/jollof-rice.jpg": "/bowen-meals/static/media/jollof-rice.e58f41999ce1067d700a.jpg",
     "static/media/beans.jpg": "/bowen-meals/static/media/beans.12f76c54915ff8b31e9b.jpg",
     "static/media/white-spag.jpg": "/bowen-meals/static/media/white-spag.46c3e31c03790dfbaa6b.jpg",
@@ -33,11 +33,11 @@
     "static/media/basket.svg": "/bowen-meals/static/media/basket.d9070820e8abe4b449f51877832ebe8c.svg",
     "static/media/person.svg": "/bowen-meals/static/media/person.9c369fc24306a445b0f44b216454204e.svg",
     "index.html": "/bowen-meals/index.html",
-    "main.602e2dea.css.map": "/bowen-meals/static/css/main.602e2dea.css.map",
-    "main.05256dbb.js.map": "/bowen-meals/static/js/main.05256dbb.js.map"
+    "main.735c2c1f.css.map": "/bowen-meals/static/css/main.735c2c1f.css.map",
+    "main.6a7e6a91.js.map": "/bowen-meals/static/js/main.6a7e6a91.js.map"
   },
   "entrypoints": [
-    "static/css/main.602e2dea.css",
-    "static/js/main.05256dbb.js"
+    "static/css/main.735c2c1f.css",
+    "static/js/main.6a7e6a91.js"
   ]
 }
