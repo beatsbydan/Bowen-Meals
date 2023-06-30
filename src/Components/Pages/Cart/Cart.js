@@ -11,7 +11,7 @@ const Cart = () => {
     const currCaf = localStorage.getItem('currCaf')
     const handleSuccess = () => {
         ctx.clearCart()
-        navigate('/success')
+        navigate('/pay')
     }
     const totalPrice = ctx.cartItems.map(item=>item.totalMealPrice|| item.totalDrinkPrice).reduce((acc,val)=>{
         return (
@@ -57,7 +57,7 @@ const Cart = () => {
                         <h3>ACCOUNT NAME: {currCaf.toUpperCase()} ONE</h3>
                     </div>
                     <div className="upload">
-                        <button>UPLOAD RECEIPT</button>
+                        <button onClick={handleSuccess}>UPLOAD RECEIPT</button>
                     </div>
                 </div>}
             </div>

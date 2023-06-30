@@ -1,14 +1,10 @@
 import {BsCheckCircle} from 'react-icons/bs'
 import './Success.css'
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navbar from '../../Header/Navbar/Navbar';
 const Success  = () => {
     const currCaf = localStorage.getItem('currCaf')
-    const navigate = useNavigate()
-    setTimeout(()=>{
-        navigate('/')
-    },10000)
     return ( 
         <React.Fragment>
             <Navbar/>
