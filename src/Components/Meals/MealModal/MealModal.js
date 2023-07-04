@@ -7,10 +7,6 @@ const MealModal = () => {
     const myCaf = localStorage.getItem('currCaf')
     const navigate = useNavigate()
     const ctx = useContext(MealContext)
-    const handleReturn = () => {
-        ctx.clearFood()
-        navigate(`/${myCaf.toLowerCase()}`)
-    }
     const addToCart = () =>{
         ctx.addToCart({
             id: ctx.meal.id,
@@ -35,7 +31,6 @@ const MealModal = () => {
                     </div>
                     <div className="price"> ₦{ctx.totalMealPrice}</div>
                     <button onClick={addToCart} className="addToCart">ADD TO CART</button>
-                    <button onClick={handleReturn} className="addMore">SELECT MORE</button>
                 </div>
             </div>
         </React.Fragment>

@@ -4,13 +4,23 @@
     position: relative;
     background-color: #518CC2;
 }
-.authButton{
+.pageContent{
     width: 90%;
     max-width: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    gap: 4rem;
     transform: translate(-50%,-50%);
+}
+.homeLogo{
+    width: 100%;
+}
+.authButton{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

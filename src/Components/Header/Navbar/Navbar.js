@@ -7,13 +7,22 @@ import {CgClose} from 'react-icons/cg'
 import {useRef} from 'react';
 import { useContext } from 'react'
 import './Navbar.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import NavContext from '../../../Contexts/NavContext/NavContext'
 import MealContext from '../../../Contexts/MealContext/MealContext'
 const Navbar = () => {
     const navRef = useRef()
     const ctx = useContext(NavContext)
     const cartCtx = useContext(MealContext)
+    const navigate = useNavigate()
+    const logout = () => {
+        navigate('/')
+        cartCtx.clearCart()
+    }
+    const handleExit = () =>{
+        ctx.handleExit(navRef)
+        cartCtx.clearCart()
+    }
     const handleCafs = (value) =>{
         ctx.handleCafeterias(value, navRef)
     }
@@ -25,8 +34,8 @@ const Navbar = () => {
             <div className='navBlock' ref={navRef}>
                 <div className="mainNav">
                     <ul className='myNav'>
-                        <Link onClick={()=>ctx.handleExit(navRef)} to={'/dashboard'}><li className='home'>Home</li></Link>
-                        <li onClick={()=>ctx.handleNav(navRef)} className='aboutUs'>How it works</li>
+                        <Link onClick={handleExit} to={'/dashboard'}><li className='home'>Home</li></Link>
+                        <Link onClick={handleExit} to={'/about'}><li className='aboutUs'>How it works</li></Link>
                         <div className='cafDropdownBlock'>
                             <div className='cafDropdown' onClick={ctx.handleDropDown}>
                                 <li className='navCafs'>Cafeterias</li>
@@ -47,6 +56,7 @@ const Navbar = () => {
                                 </ul>
                             </div>}
                         </div>
+                        <li className='logout' onClick={logout}>Logout</li>
                     </ul>
                 </div>
             </div>

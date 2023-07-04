@@ -22,12 +22,19 @@ a{
 }
 .myForm h3{
   text-align:center;
+  padding-top: 1rem;
+}
+.formLogo{
+  width: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  position: relative;
+  margin-top: 0.3rem;
 }
 .myForm form{
   width: 90%;
   max-width: 500px;
   height: 400px;
-  padding-top: 3.5rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);

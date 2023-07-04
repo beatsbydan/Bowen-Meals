@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import './StaffLogin.css'
 import StaffLoginContext from '../../../../Contexts/AuthContext/StaffLoginContext/StaffLoginContext';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../../../Assets/Images/logo.svg'
 const StaffLogin = () => {
     const ctx = useContext(StaffLoginContext)
     const navigate = useNavigate()
@@ -16,6 +17,7 @@ const StaffLogin = () => {
         <section>
             <div className="myForm staffForm">
                 <form action="#">
+                    <img src={logo} alt ='' className="formLogo"/>
                     <h3>STAFF</h3>
                     <div className="formElement">
                         <label htmlFor="">

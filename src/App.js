@@ -25,6 +25,7 @@ import HomePage from './Components/Pages/HomePage/HomePage';
 import StaffLoginContextProvider from './Contexts/AuthContext/StaffLoginContext/StaffLoginContextProvider';
 import StudentLoginContextProvider from './Contexts/AuthContext/StudentLoginContext/StudentLoginContextProvider';
 import PaymentContextProvider from './Contexts/PaymentContext/PaymentContextProvider';
+import About from './Components/Pages/About/About';
 function App() {
   return (
     <NavContextProvider>
@@ -37,6 +38,7 @@ function App() {
                   <Route exact path='/' element={<HomePage/>}/>
                   <Route path='/dashboard' element={<Home/>}/>
                   <Route path='/bbsf' element={<Bbsf/>}/>
+                  <Route path='/about' element={<About/>}/>
                   <Route path='/blessed' element={<Blessed/>}/>
                   <Route path='/buwa' element={<Buwa/>}/>
                   <Route path='/divine' element={<Divine/>}/>

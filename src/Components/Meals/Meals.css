@@ -4,6 +4,10 @@
     margin: 1rem auto 10rem;
     position: relative;
 }
+.meals h2{
+    text-align: center;
+    margin-top: 2em;
+}
 .edibles{
     width: 100%;
     max-width: 250px;

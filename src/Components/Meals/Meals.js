@@ -20,6 +20,7 @@ const Meals = () => {
                     <button onClick={handleFood}>FOOD</button>
                     <button onClick={handleDrink}>DRINKS</button>
                 </div>
+                <h2>{type === 'food' ? 'FOOD' : 'DRINKS'}</h2>
                 <ul className='mealItems'>
                     {type === 'food' ? MealItems.map(meal=>{
                         return(

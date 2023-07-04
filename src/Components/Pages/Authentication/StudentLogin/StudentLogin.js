@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import './StudentLogin.css'
 import StudentLoginContext from '../../../../Contexts/AuthContext/StudentLoginContext/StudentLoginContext';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../../../Assets/Images/logo.svg'
 const StudentLogin = () => {
     const ctx = useContext(StudentLoginContext)
     const navigate = useNavigate()
@@ -16,11 +17,12 @@ const StudentLogin = () => {
         <section>
             <div className="myForm studentForm">
                 <form action="">
+                    <img src={logo} alt ='' className="formLogo"/>
                     <h3>STUDENT</h3>
                     <div className="formElement">
                         <label htmlFor="">
                             User-ID
-                            <small className='error'>{ctx.formErrors.user}</small>
+                            <small className='error'>{ctx.formErrors.user || ctx.formErrors.res}</small>
                         </label>
                         <input className={ctx.formErrors.user ? 'errorField' : ''} type="text" placeholder='User ID' name='userId' value={ctx.formData.userId} onChange={ctx.handleChange} />
                     </div>

@@ -7,10 +7,6 @@ const DrinkModal = () => {
     const ctx = useContext(MealContext)
     const myCaf = localStorage.getItem('currCaf')
     const navigate = useNavigate()
-    const handleReturn = () => {
-        ctx.clearDrinks()
-        navigate(`/${myCaf.toLowerCase()}`)
-    }
     const addToCart = () =>{
         ctx.addToCart({
             id: ctx.drink.id,
@@ -36,7 +32,6 @@ const DrinkModal = () => {
                         </div>
                         <div className="price"> ₦{ctx.totalDrinkPrice}</div>
                         <button onClick={addToCart} className="addToCart">ADD TO CART</button>
-                        <button onClick={handleReturn} className="addMore">SELECT MORE</button>
                     </div>
                 </div>
             </div>

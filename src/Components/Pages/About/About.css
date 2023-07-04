@@ -1,0 +1,12 @@
+.about{
+    width: 90%;
+    max-width: 550px;
+    margin: 3em auto 10em auto;
+    display:flex;
+    flex-direction:column;
+    gap: 2rem;
+}
+.about p{
+    font-weight: 600;
+    text-align: center
+}

@@ -45,7 +45,6 @@ const Cart = () => {
                         <span>TOTAL:<span> ₦{totalPrice}.</span></span>
                     </div>}
                     {ctx.cartSize > 0 &&<div className="actions">
-                        <button onClick = {handleSuccess}>CHECKOUT</button>
                         <button onClick={ctx.clearCart}>CLEAR</button>
                     </div>}
                 </div>

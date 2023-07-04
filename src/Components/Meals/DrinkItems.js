@@ -1,15 +1,15 @@
-import coke from '../../Assets/Images/coke.jpg'
-import fanta from '../../Assets/Images/fanta.jpg'
-import pepsi from '../../Assets/Images/pepsi.jpg'
+import coke from '../../Assets/Images/coke.jpeg'
+import fanta from '../../Assets/Images/fanta.jpeg'
+import pepsi from '../../Assets/Images/pepsi.jpeg'
 import sosa from '../../Assets/Images/sosa.jpg'
 import pulpi from '../../Assets/Images/pulpi.jpg'
 import berriBlast from '../../Assets/Images/berry-blast.jpg'
-import fearless from '../../Assets/Images/fearless.jpg'
+import fearless from '../../Assets/Images/fearless.jpeg'
 import chivita from '../../Assets/Images/chivita.jpg'
 import lacasera from '../../Assets/Images/lacasera.jpg'
 import smoov from '../../Assets/Images/smoov.jpg'
 import viju from '../../Assets/Images/viju.jpg'
-import water from '../../Assets/Images/water.jpg'
+import water from '../../Assets/Images/water.jpeg'
 const DrinkItems  = [
     {
         id: 'coke',

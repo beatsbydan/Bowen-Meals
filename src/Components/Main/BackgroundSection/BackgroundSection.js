@@ -10,7 +10,6 @@ const BackgroundSection = () => {
                 <button>HOW IT WORKS</button>
             </div>
         </section>
-     );
+    );
 }
- 
 export default BackgroundSection;
