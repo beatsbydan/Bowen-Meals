@@ -39,7 +39,8 @@ const PaymentsContextProvider = (props) => {
             location: location,
             receipt: file,
             order: [...mealCtx.cartItems],
-            totalPrice: mealCtx.totalPrice
+            totalPrice: mealCtx.totalPrice,
+            cafetariaNumber: '08140562021'
         }
         const formErrors = ValidatePayment(formData)
         setFormErrors(formErrors)
