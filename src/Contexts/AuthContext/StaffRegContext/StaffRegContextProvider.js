@@ -39,7 +39,7 @@ const StaffRegContextProvider = (props) => {
                 if(err.response.status === 404){
                     alert(err.response.data.message)
                 }
-                return
+                return err
             })
             
         }
