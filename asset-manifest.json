@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bowen-meals/static/css/main.44d78e17.css",
-    "main.js": "/bowen-meals/static/js/main.156eacb8.js",
+    "main.js": "/bowen-meals/static/js/main.3ce81bad.js",
     "static/media/login-bg.png": "/bowen-meals/static/media/login-bg.3d55c86edb884820abb2.png",
     "static/media/main-bg.svg": "/bowen-meals/static/media/main-bg.338b6bd0105838679ef50c36ae8ff4d3.svg",
     "static/media/bbsf-caf.jpg": "/bowen-meals/static/media/bbsf-caf.342288d40c8cf501bd48.jpg",
@@ -28,10 +28,10 @@
     "static/media/person.svg": "/bowen-meals/static/media/person.9c369fc24306a445b0f44b216454204e.svg",
     "index.html": "/bowen-meals/index.html",
     "main.44d78e17.css.map": "/bowen-meals/static/css/main.44d78e17.css.map",
-    "main.156eacb8.js.map": "/bowen-meals/static/js/main.156eacb8.js.map"
+    "main.3ce81bad.js.map": "/bowen-meals/static/js/main.3ce81bad.js.map"
   },
   "entrypoints": [
     "static/css/main.44d78e17.css",
-    "static/js/main.156eacb8.js"
+    "static/js/main.3ce81bad.js"
   ]
 }
