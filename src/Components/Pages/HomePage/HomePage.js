@@ -10,6 +10,7 @@ const HomePage = () => {
                     <Link to={'/staffLogin'}>STAFF LOGIN</Link>
                     <Link to={'/studentLogin'}>STUDENT LOGIN</Link>
                 </div>
+                <span>Don't have an account? Register <Link to={'/register'}>here</Link></span>
             </div>
         </section>
     );

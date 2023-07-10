@@ -17,9 +17,11 @@
     width: 50%;
     height: 200px;
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
     border-radius:0.5rem ;
+}
+.leftMeal{
+    background-size: cover;
 }
 .modalRight{
     width: 50%;

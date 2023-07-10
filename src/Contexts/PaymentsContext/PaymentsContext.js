@@ -1,6 +1,6 @@
 import React from "react";
 
-const PaymentContext = React.createContext({
+const PaymentsContext = React.createContext({
     file: '',
     location: '',
     formErrors: {},
@@ -8,4 +8,4 @@ const PaymentContext = React.createContext({
     handleFileChange: ()=>{},
     handleSubmit: ()=>{}
 })
-export default PaymentContext
+export default PaymentsContext

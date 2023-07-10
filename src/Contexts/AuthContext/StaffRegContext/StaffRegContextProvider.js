@@ -1,9 +1,9 @@
-import ValidateStudentLogin from "../../../Components/Pages/Authentication/StudentLogin/ValidateStudentLogin";
-import StudentLoginContext from "./StudentLoginContext";
+import axios from "axios";
+import ValidateStaffReg from "../../../Components/Pages/Authentication/StaffReg/ValidateStaffReg";
+import StaffRegContext from "./StaffRegContext";
 import { useState } from "react";
-import axios from 'axios'
-const StudentLoginContextProvider = (props) => {
-    const studentLoginApi = 'https://odukz-backend-p4f2.onrender.com/student/student-login'
+const StaffRegContextProvider = (props) => {
+    const staffRegApi = 'https://odukz-backend-p4f2.onrender.com/staff/staff-register'
     const [formData,setFormData] = useState({
         userId: '',
         password: ''
@@ -17,22 +17,17 @@ const StudentLoginContextProvider = (props) => {
     }
     const handleSubmit = async () => {
         let success = {}
-        const myErrors = ValidateStudentLogin(formData)
+        const myErrors = ValidateStaffReg(formData)
         setFormErrors(myErrors)
         if(myErrors.all === ""){
-            await axios.post(studentLoginApi,{...formData},{
+            await axios.post(staffRegApi,{...formData},{
                 headers:{
                     'Content-Type': 'application/json'
                 }
             })
             .then(res=>{
                 if(res.status === 200){
-                    const user = {
-                        isLoggedIn:true,
-                        userType: 'student',
-                    }
-                    localStorage.setItem('user', JSON.stringify(user))
-                    alert('Login Successful!')
+                    alert('Registeration successful!')
                     success.formSuccess = true
                     setFormData({
                         userId:'',
@@ -41,8 +36,12 @@ const StudentLoginContextProvider = (props) => {
                 }
             })
             .catch(err=>{
+                if(err.response.status === 404){
+                    alert(err.response.data.message)
+                }
                 return
             })
+            
         }
         else{
             success.formSuccess = false
@@ -56,9 +55,9 @@ const StudentLoginContextProvider = (props) => {
         handleSubmit:handleSubmit
     }
     return ( 
-        <StudentLoginContext.Provider value={updatedContext}>
+        <StaffRegContext.Provider value={updatedContext}>
             {props.children}
-        </StudentLoginContext.Provider>
+        </StaffRegContext.Provider>
     );
 }
-export default StudentLoginContextProvider;
+export default StaffRegContextProvider;

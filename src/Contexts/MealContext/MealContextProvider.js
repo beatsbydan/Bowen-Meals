@@ -75,6 +75,11 @@ const MealContextProvider = (props) => {
         }
         return defaultDrinkItems;
     }
+    const totalPrice = cartItems.map(item=>item.totalMealPrice || item.totalDrinkPrice).reduce((acc,val)=>{
+        return (
+            acc + val
+        )
+    },0)
     const [myFood, dispatchMyFood] = useReducer(foodReducer,defaultFoodItems)
     const [myDrink, dispatchMyDrink] = useReducer(drinkReducer,defaultDrinkItems)
     const handleMeal = (meal) => {
@@ -126,6 +131,7 @@ const MealContextProvider = (props) => {
     const updatedContext = {
         cartSize: cartItems.length,
         cartItems: cartItems,
+        totalPrice: totalPrice,
         spoons: myFood.spoons,
         totalMealPrice: myFood.totalMealPrice,
         totalDrinkPrice: myDrink.totalDrinkPrice,

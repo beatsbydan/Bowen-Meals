@@ -16,8 +16,10 @@ const Navbar = () => {
     const cartCtx = useContext(MealContext)
     const navigate = useNavigate()
     const logout = () => {
-        navigate('/')
+        navigate('/login')
+        localStorage.clear()
         cartCtx.clearCart()
+        ctx.handleExit(navRef)
     }
     const handleExit = () =>{
         ctx.handleExit(navRef)

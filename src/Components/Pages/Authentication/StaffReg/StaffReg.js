@@ -1,22 +1,22 @@
 import { useContext } from 'react';
-import StaffLoginContext from '../../../../Contexts/AuthContext/StaffLoginContext/StaffLoginContext';
+import StaffRegContext from '../../../../Contexts/AuthContext/StaffRegContext/StaffRegContext';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../../Assets/Images/logo.svg'
 
-const StaffLogin = () => {
-    const ctx = useContext(StaffLoginContext)
+const StaffReg = () => {
+    const ctx = useContext(StaffRegContext)
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
         ctx.handleSubmit().then(result=>{
             if(result.formSuccess){
-                navigate('/dashboard')
+                navigate('/login')
             }
         })
     }
     return ( 
         <section>
-            <div className="myForm staffForm">
+            <div className="myForm staffForm reg">
                 <form action="#">
                     <img src={logo} alt ='' className="formLogo"/>
                     <h3>STAFF</h3>
@@ -35,7 +35,7 @@ const StaffLogin = () => {
                         <input className={ctx.formErrors.password ? 'errorField' : ''} type="password" placeholder='Password' name='password' value={ctx.formData.password} onChange={ctx.handleChange} />
                     </div>
                     <div className="formActions">
-                        <button onClick={handleSubmit} type='buttton'>LOGIN</button>
+                        <button onClick={handleSubmit} type='buttton'>REGISTER</button>
                     </div>
                 </form>
             </div>
@@ -43,4 +43,4 @@ const StaffLogin = () => {
     );
 }
 
-export default StaffLogin;
+export default StaffReg;

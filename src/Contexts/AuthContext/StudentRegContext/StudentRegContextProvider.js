@@ -1,9 +1,9 @@
-import ValidateStudentLogin from "../../../Components/Pages/Authentication/StudentLogin/ValidateStudentLogin";
-import StudentLoginContext from "./StudentLoginContext";
+import axios from "axios";
+import ValidateStudentReg from "../../../Components/Pages/Authentication/StudentReg/ValidateStudentReg";
+import StudentRegContext from "./StudentRegContext";
 import { useState } from "react";
-import axios from 'axios'
-const StudentLoginContextProvider = (props) => {
-    const studentLoginApi = 'https://odukz-backend-p4f2.onrender.com/student/student-login'
+const StudentRegContextProvider = (props) => {
+    const studentRegApi = 'https://odukz-backend-p4f2.onrender.com/student/student-register'
     const [formData,setFormData] = useState({
         userId: '',
         password: ''
@@ -17,22 +17,17 @@ const StudentLoginContextProvider = (props) => {
     }
     const handleSubmit = async () => {
         let success = {}
-        const myErrors = ValidateStudentLogin(formData)
+        const myErrors = ValidateStudentReg(formData)
         setFormErrors(myErrors)
         if(myErrors.all === ""){
-            await axios.post(studentLoginApi,{...formData},{
+            await axios.post(studentRegApi, {...formData}, {
                 headers:{
                     'Content-Type': 'application/json'
                 }
             })
             .then(res=>{
                 if(res.status === 200){
-                    const user = {
-                        isLoggedIn:true,
-                        userType: 'student',
-                    }
-                    localStorage.setItem('user', JSON.stringify(user))
-                    alert('Login Successful!')
+                    alert('Registeration successful!')
                     success.formSuccess = true
                     setFormData({
                         userId:'',
@@ -41,6 +36,9 @@ const StudentLoginContextProvider = (props) => {
                 }
             })
             .catch(err=>{
+                if(err.response.status === 404){
+                    alert(err.response.data.message)
+                }
                 return
             })
         }
@@ -56,9 +54,9 @@ const StudentLoginContextProvider = (props) => {
         handleSubmit:handleSubmit
     }
     return ( 
-        <StudentLoginContext.Provider value={updatedContext}>
+        <StudentRegContext.Provider value={updatedContext}>
             {props.children}
-        </StudentLoginContext.Provider>
+        </StudentRegContext.Provider>
     );
 }
-export default StudentLoginContextProvider;
+export default StudentRegContextProvider;

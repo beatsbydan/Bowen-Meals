@@ -1,17 +1,18 @@
 import { useContext } from 'react';
-import './StudentLogin.css'
 import StudentLoginContext from '../../../../Contexts/AuthContext/StudentLoginContext/StudentLoginContext';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../../Assets/Images/logo.svg'
+
 const StudentLogin = () => {
     const ctx = useContext(StudentLoginContext)
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        const res = ctx.handleSubmit()
-        if(res.formSuccess){
-            navigate('/dashboard')
-        }
+        ctx.handleSubmit().then(result=>{
+            if(result.formSuccess){
+                navigate('/dashboard')
+            }
+        })
     }
     return ( 
         <section>

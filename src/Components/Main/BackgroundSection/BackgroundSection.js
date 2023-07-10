@@ -1,5 +1,6 @@
 import './BackgroundSection.css'
 import bg from '../../../Assets/Images/main-bg.svg'
+import {Link} from 'react-router-dom'
 const BackgroundSection = () => {
     return ( 
         <section className="background">
@@ -7,7 +8,7 @@ const BackgroundSection = () => {
             <div className="content">
                 <h1>Healthy food for busy people.</h1>
                 <p>Imagine devouring healthy and delicious meals without so much as lifting a pot.</p>
-                <button>HOW IT WORKS</button>
+                <Link to={'/about'} >HOW IT WORKS</Link>
             </div>
         </section>
     );

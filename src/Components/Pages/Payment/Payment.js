@@ -1,17 +1,21 @@
 import { useContext } from "react";
 import Navbar from "../../Header/Navbar/Navbar";
 import './Payment.css'
-import PaymentContext from "../../../Contexts/PaymentContext/PaymentContext";
+import PaymentsContext from "../../../Contexts/PaymentsContext/PaymentsContext";
+import MealContext from "../../../Contexts/MealContext/MealContext";
 import { useNavigate } from "react-router-dom";
 const Payment = () => {
-    const ctx = useContext(PaymentContext)
+    const ctx = useContext(PaymentsContext)
+    const mealCtx = useContext(MealContext)
     const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
-        const res = ctx.handleSubmit()
-        if(res.formSuccess){
-            navigate('/success')
-        }
+        ctx.handleSubmit().then(result=>{
+            if(result.formSuccess){
+                mealCtx.clearCart()
+                navigate('/success')
+            }
+        })
     }
     return ( 
         <section>

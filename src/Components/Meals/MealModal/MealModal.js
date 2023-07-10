@@ -22,7 +22,7 @@ const MealModal = () => {
             <Navbar/>
             <h2 className='food'>{ctx.meal.food}</h2>
             <div className="modalBlock">
-                <div className="modalLeft" style={{backgroundImage: `url(${ctx.meal.img}`}}></div>
+                <div className="modalLeft leftMeal" style={{backgroundImage: `url(${ctx.meal.img}`}}></div>
                 <div className="modalRight">
                     <div className="numberOfSpoons">
                         <button onClick={()=>ctx.addFood(ctx.meal)} className="increment">+</button>

@@ -10,14 +10,8 @@ const Cart = () => {
     const ctx = useContext(MealContext)
     const currCaf = localStorage.getItem('currCaf')
     const handleSuccess = () => {
-        ctx.clearCart()
         navigate('/pay')
     }
-    const totalPrice = ctx.cartItems.map(item=>item.totalMealPrice|| item.totalDrinkPrice).reduce((acc,val)=>{
-        return (
-            acc + val
-        )
-    },0)
     return ( 
         <React.Fragment>
             <Navbar/>
@@ -42,7 +36,7 @@ const Cart = () => {
                         })}
                     </ul>}
                     {ctx.cartSize > 0 &&<div className="cartTotal">
-                        <span>TOTAL:<span> ₦{totalPrice}.</span></span>
+                        <span>TOTAL:<span> ₦{ctx.totalPrice}.</span></span>
                     </div>}
                     {ctx.cartSize > 0 &&<div className="actions">
                         <button onClick={ctx.clearCart}>CLEAR</button>

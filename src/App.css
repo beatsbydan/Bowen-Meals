@@ -20,6 +20,9 @@ a{
   background-position: center center;
   position: relative;
 }
+.reg{
+  background-image: url(./Assets/Images/reg-bg.webp);
+}
 .myForm h3{
   text-align:center;
   padding-top: 1rem;

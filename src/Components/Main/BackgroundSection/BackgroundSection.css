@@ -29,7 +29,8 @@
     font-size: 1.3rem;
     color:white;
 }
-.content button{
+.content a{
+    text-decoration:none;
     cursor: pointer;
     font-weight: 600;
     background-color: rgba(31, 38, 43, 1);
