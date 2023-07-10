@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bowen-meals/static/css/main.8db4e048.css",
-    "main.js": "/bowen-meals/static/js/main.8c8f4b4d.js",
+    "main.css": "/bowen-meals/static/css/main.44d78e17.css",
+    "main.js": "/bowen-meals/static/js/main.156eacb8.js",
     "static/media/login-bg.png": "/bowen-meals/static/media/login-bg.3d55c86edb884820abb2.png",
     "static/media/main-bg.svg": "/bowen-meals/static/media/main-bg.338b6bd0105838679ef50c36ae8ff4d3.svg",
     "static/media/bbsf-caf.jpg": "/bowen-meals/static/media/bbsf-caf.342288d40c8cf501bd48.jpg",
@@ -15,6 +15,7 @@
     "static/media/glory-caf.jpg": "/bowen-meals/static/media/glory-caf.e2bb0da429fc62f0a4ad.jpg",
     "static/media/y2k-caf.jpg": "/bowen-meals/static/media/y2k-caf.db95bb3c97f8dcbaddfc.jpg",
     "static/media/sumptuous-caf.jpg": "/bowen-meals/static/media/sumptuous-caf.cdf9a9a74067d5eedcbe.jpg",
+    "static/media/reg-bg.webp": "/bowen-meals/static/media/reg-bg.65bd94b35b3d452f0d37.webp",
     "static/media/jollof-rice.jpeg": "/bowen-meals/static/media/jollof-rice.9ab4ee42786b04da2cb4.jpeg",
     "static/media/beans.jpeg": "/bowen-meals/static/media/beans.0bec757704e269369b09.jpeg",
     "static/media/sausage.jpeg": "/bowen-meals/static/media/sausage.fe04f9f892d22b65702a.jpeg",
@@ -26,11 +27,11 @@
     "static/media/basket.svg": "/bowen-meals/static/media/basket.d9070820e8abe4b449f51877832ebe8c.svg",
     "static/media/person.svg": "/bowen-meals/static/media/person.9c369fc24306a445b0f44b216454204e.svg",
     "index.html": "/bowen-meals/index.html",
-    "main.8db4e048.css.map": "/bowen-meals/static/css/main.8db4e048.css.map",
-    "main.8c8f4b4d.js.map": "/bowen-meals/static/js/main.8c8f4b4d.js.map"
+    "main.44d78e17.css.map": "/bowen-meals/static/css/main.44d78e17.css.map",
+    "main.156eacb8.js.map": "/bowen-meals/static/js/main.156eacb8.js.map"
   },
   "entrypoints": [
-    "static/css/main.8db4e048.css",
-    "static/js/main.8c8f4b4d.js"
+    "static/css/main.44d78e17.css",
+    "static/js/main.156eacb8.js"
   ]
 }
